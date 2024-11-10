@@ -2,7 +2,6 @@ import { scene, camera } from "./sceneSetup.js";
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import {initializeAgora} from "./videoSetup.js";
-import { CONFIG } from './config.js';
 
 const loader = new GLTFLoader();
 let monitor;
@@ -97,7 +96,7 @@ let localTrack;
 
 async function startAgora() {
     const videoElement = await initializeAgora(
-        CONFIG.AGORA_API_KEY,
+        "d31faec490be4c68a3d3c659585719fe",
         "main",
         sessionStorage.getItem("uid") || String(Math.floor(Math.random() * 10000))
     );
@@ -105,7 +104,7 @@ async function startAgora() {
 
 
     localTrack = await AgoraRTC.createCameraVideoTrack();
-    localTrack.play("video-container"); // Привяжите к HTML элементу, где будет видео
+    localTrack.play("video-container");
 
     client.on("user-published", (user, mediaType) => {
         client.subscribe(user, mediaType);
