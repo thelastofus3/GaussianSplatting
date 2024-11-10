@@ -2,6 +2,7 @@ import { scene, camera } from "./sceneSetup.js";
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import {initializeAgora} from "./videoSetup.js";
+import { CONFIG } from './config.js';
 
 const loader = new GLTFLoader();
 let monitor;
