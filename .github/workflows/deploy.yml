@@ -13,12 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Replace API key in config.js
-        run: |
-          sed -i "s/REPLACE_WITH_API_KEY/${{ secrets.AGORA_API_KEY }}/g" config.js
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: . # Укажите директорию вашего проекта
+          publish_dir: .
