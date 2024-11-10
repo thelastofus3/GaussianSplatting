@@ -127,6 +127,7 @@ async function startAgora() {
 
 document.getElementById("video-agora").addEventListener("click", () => {
     startAgora();
+    document.getElementById("phone-container").style.display = "none";
 });
 
 document.getElementById("video-regular").addEventListener("click", () => {
@@ -153,6 +154,7 @@ document.getElementById("video-upload").addEventListener("change", (event) => {
         videoElement.play();
         updateMonitorTexture(videoElement);
     }
+    document.getElementById("phone-container").style.display = "none";
 });
 
 function updateMonitorTexture(videoElement) {
