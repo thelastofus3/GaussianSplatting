@@ -96,8 +96,8 @@ let localTrack;
 
 async function startAgora() {
     const videoElement = await initializeAgora(
-        "d31faec490be4c68a3d3c659585719fe", // Ваш App ID
-        "main", // Канал
+        CONFIG.AGORA_API_KEY,
+        "main",
         sessionStorage.getItem("uid") || String(Math.floor(Math.random() * 10000))
     );
 
@@ -126,7 +126,7 @@ async function startAgora() {
 }
 
 document.getElementById("video-agora").addEventListener("click", () => {
-    startAgora(); // Запуск Agora видео
+    startAgora();
 });
 
 document.getElementById("video-regular").addEventListener("click", () => {
