@@ -1,5 +1,4 @@
 import { LumaSplatsThree } from '@lumaai/luma-web';
-// import {initializeMouseControl, updateCameraPositionWithCollision} from "./controls.js";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import {camera, renderer, scene} from "./sceneSetup.js";
 import * as THREE from 'three';
